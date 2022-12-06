@@ -1,0 +1,7 @@
+data1<-read.xlsx(file.choose())
+dim(data1)
+count(data1)
+data1%>%arrange(desc(First.name))
+data1%>%filter(First.name=="Abbot")%>%select(Email)
+data1%>%filter(Gender=="Male")%>%count(Gender)
+data1%>%filter(Gender=="Female")%>%count(Gender)
